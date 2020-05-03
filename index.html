@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<style>
+	*{margin: 0px;padding: 0px;}
+	
+	#menubar
+	{
+		position: absolute;
+		width:100%;
+		height:55px;
+	}
+	
+	#menubarback
+	{
+		position: absolute;
+		width:100%;
+		height:52px;
+	}
+	
+	ul
+	{margin-left: 33%;}
+	
+	.menu
+	{
+		float: left;;
+		list-style-type: none;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 11px;
+		padding-bottom: 14px;
+		transition: 1s ease;
+		background-color:white;
+		transform-origin: bottom;
+		cursor: pointer;
+		transform: perspective(500px)rotateX(-90deg);
+	}
+	
+	.menuicon
+	{
+		float: left;;
+		list-style-type: none;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 11px;
+		padding-bottom: 14px;
+		transition: 1s ease;
+		cursor: pointer;
+		background-image: url(Scenery-HD-Wallpapers-4.jpg);
+		transform-origin: bottom;
+	}
+	
+	.A{
+		text-decoration: none;
+		font-size: 15pt;
+		font-family: Gadugi;
+		color: white;
+		}
+	
+	.AA{
+		text-decoration: none;
+		font-size: 15pt;
+		font-family: Gadugi;
+		color: blue;
+		}
+	
+	
+	#main 
+	{
+	position: absolute;
+	margin-top: -40%;
+	margin-left: 35%;	
+  	width: 30%;
+	height: 200px;
+  	}
+	
+	#card
+	{	
+	transition: 1s;
+	transform-style: preserve-3d;
+	transform-origin: center;
+	transform:perspective(1000px)rotateY(0deg);
+	}
+	
+	#login
+	{
+		position: absolute;
+		width:100%;
+		height:350px;
+		border-top-left-radius: 100%;
+		border-top-right-radius: 100%;
+		box-shadow: 0px 0px 50px 0px black;
+	}
+	#register
+	{
+		position: absolute;
+		width:100%;
+		height:350px;
+		transition: 1s ease;
+		border-top-left-radius: 100%;
+		border-top-right-radius: 100%;
+		box-shadow: 0px 0px 50px 0px black;
+		transform: rotateY(180deg);
+		backface-visibility: hidden;
+	}
+	
+	#signin,#signinr
+	{
+		text-align: center;
+		margin-top: 10%;
+		font-family: arial;
+		font-size: 20pt;
+		color:white;
+		transform: rotate(0deg);
+	}
+	
+	#t1
+	{
+		position: absolute;
+		text-align: center;
+		width: 90%;
+		height: 35px;
+		border-radius: 100px;
+		margin-top: 7%;
+		margin-left: 4.4%;
+		font-family: Arial;
+		background-color: ivory;
+		font-size: 12pt;
+		border: 1.5px solid ivory;
+	}
+	
+	#tr1
+	{
+		position: absolute;
+		text-align: center;
+		width: 90%;
+		height: 35px;
+		border-radius: 100px;
+		margin-top:15%;
+		margin-left: 4.4%;
+		font-family: Arial;
+		background-color: ivory;
+		font-size: 12pt;
+		border: 1.5px solid ivory;
+	}
+	
+	#t2
+	{
+		position: absolute;
+		width: 90%;
+		height: 35px;
+		text-align: center;
+		border-radius: 100px;
+		margin-top: 20%;
+		margin-left: 4.4%;
+		font-family: Arial;
+		background-color: ivory;
+		font-size: 12pt;
+		border: 1.5px solid ivory;
+	}
+	
+	#tr2
+	{
+		position: absolute;
+		width: 90%;
+		height: 35px;
+		text-align: center;
+		border-radius: 100px;
+		margin-top: 30%;
+		margin-left: 4.4%;
+		font-family: Arial;
+		background-color: ivory;
+		font-size: 12pt;
+		border: 1.5px solid ivory;
+	}
+	
+	#t3
+	{
+		position: absolute;
+		width: 90%;
+		height: 33px;
+		text-align: center;
+		border-radius: 100px;
+		margin-top: 33%;
+		margin-left: 4.4%;
+		font-family: Arial;
+		background-color: ivory;
+		font-size: 12pt;
+		border: 1.5px solid ivory;
+	}
+	
+	#loginbb
+	{
+		position: absolute;
+		width: 50%;
+		height: 33px;
+		margin-top: 48%;
+		margin-left: 24.8%;
+		font-family: Arial;
+		background-color: #FF4346;
+		font-size: 12pt;
+		color: snow;
+		border: 1.5px solid #FF4346;
+		transition: 1s ease;
+		cursor:pointer;
+	}
+	#loginbbr
+	{
+		position: absolute;
+		width: 50%;
+		height: 33px;
+		margin-top: 48%;
+		margin-left: 25.2%;
+		font-family: Arial;
+		background-color: #4369FF;
+		font-size: 12pt;
+		color: snow;
+		border: 1.5px solid #4369FF;
+		transition: 1s ease;
+		cursor:pointer;
+	}
+	
+	#loginbb:hover{background-color: #4369FF;border: 1.5px solid #4369FF;}
+	#loginbbr:hover{background-color: #FF4346;;border: 1.5px solid #FF4346;}
+	
+	#member,#rmember
+	{
+		text-align: center;
+		margin-top: 60%;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 12pt;
+	}
+	span{cursor: pointer;color: white;}
+	
+</style>
+
+
+<script>
+	
+	function second()
+	{
+		document.getElementById("card").style.transform="perspective(1000px)rotateY(-180deg)";
+		setTimeout(function ()
+		{document.getElementById("login").style.visibility="hidden";},290);
+	}
+	
+	function first()
+	{
+		document.getElementById("card").style.transform="perspective(1000px)rotateY(0deg)";
+		setTimeout(function ()
+		{document.getElementById("login").style.visibility="visible";},290);
+	}
+	
+	function rollin1()
+	{
+	document.getElementById("sd1").style.transform="perspective(500px)rotateX(-150deg)";
+	document.getElementById("ds1").style.transform="perspective(500px)rotateX(0deg)";
+	}
+	
+	function rollin2()
+	{
+	document.getElementById("sd2").style.transform="perspective(500px)rotateX(150deg)";
+	document.getElementById("ds2").style.transform="perspective(500px)rotateX(0deg)";	
+	}
+		
+	function rollin3()
+	{
+	document.getElementById("sd3").style.transform="perspective(500px)rotateX(150deg)";
+	document.getElementById("ds3").style.transform="perspective(500px)rotateX(0deg)";
+	}
+		
+	function rollin4()
+	{
+	document.getElementById("sd4").style.transform="perspective(500px)rotateX(150deg)";
+	document.getElementById("ds4").style.transform="perspective(500px)rotateX(0deg)";
+	}
+	
+	function rollin5()
+	{
+	document.getElementById("sd5").style.transform="perspective(500px)rotateX(150deg)";
+	document.getElementById("ds5").style.transform="perspective(500px)rotateX(0deg)";	
+	}
+	
+	
+	function rollout1()
+	{
+	document.getElementById("sd1").style.transform="perspective(500px)rotateX(0deg)";
+	document.getElementById("ds1").style.transform="perspective(500px)rotateX(-90deg)";
+	}
+		
+	function rollout2()
+	{
+	document.getElementById("sd2").style.transform="perspective(500px)rotateX(0deg)";
+	document.getElementById("ds2").style.transform="perspective(500px)rotateX(-90deg)";
+	}
+		
+	function rollout3()
+	{
+	document.getElementById("sd3").style.transform="perspective(500px)rotateX(0deg)";
+	document.getElementById("ds3").style.transform="perspective(500px)rotateX(-90deg)";
+	}
+		
+	function rollout4()
+	{
+	document.getElementById("sd4").style.transform="perspective(500px)rotateX(0deg)";
+	document.getElementById("ds4").style.transform="perspective(500px)rotateX(-90deg)";	
+	}
+		
+	function rollout5()
+	{
+	document.getElementById("sd5").style.transform="perspective(500px)rotateX(0deg)";
+	document.getElementById("ds5").style.transform="perspective(500px)rotateX(-90deg)";	
+	}
+	
+</script>
+
+</head>
+
+<body>
+<nav id="menubarbacktrans"></nav>
+<nav id="menubarback">
+ <ul>
+  <li class="menu" onMouseOver="rollin1()" onMouseOut="rollout1()" id="ds1"><a href="#" class="AA">Home</a></li>
+  <li class="menu" onMouseOver="rollin2()" onMouseOut="rollout2()" id="ds2"><a href="#" class="AA">Hotel</a></li>
+  <li class="menu" onMouseOver="rollin3()" onMouseOut="rollout3()" id="ds3"><a href="" class="AA">Price</a></li>
+  <li class="menu" onMouseOver="rollin4()" onMouseOut="rollout4()" id="ds4"><a href="" class="AA">FAQ</a></li>
+  <li class="menu" onMouseOver="rollin5()" onMouseOut="rollout5()" id="ds5"><a href="" class="AA">Contact Us</a></li>
+</ul>
+</nav>
+
+
+<nav id="menubar">
+ <ul>
+<li class="menuicon" onMouseOver="rollin1()" onMouseOut="rollout1()" id="sd1"><a href="#" class="A">Home</a></li>
+  <li class="menuicon" onMouseOver="rollin2()" onMouseOut="rollout2()" id="sd2"><a href="#" class="A">Hotel</a></li>
+  <li class="menuicon" onMouseOver="rollin3()" onMouseOut="rollout3()" id="sd3"><a href="#" class="A">Price</a></li>
+  <li class="menuicon" onMouseOver="rollin4()" onMouseOut="rollout4()" id="sd4"><a href="#" class="A">FAQ</a></li>
+  <li class="menuicon" onMouseOver="rollin5()" onMouseOut="rollout5()" id="sd5"><a href="#" class="A">Contact Us</a></li>
+</ul>
+</nav>
+<div id="im"><img src="Scenery-HD-Wallpapers-4.jpg" height="760px" width="100%"/></div>
+<div id="main">
+<div id="card">
+<div id="login">
+	<p id="signin">REGISTER</p>	
+	<input type="text" placeholder="USERNAME" id="t1"/>
+	<input type="text" placeholder="@gmail.com" id="t2"/>
+	<input type="password" placeholder="password" id="t3"/>
+	<button id="loginbb">REGISTER</button>
+	<p id="member">Already a member then<span onClick="second()"> SIGN IN </span></p>
+</div>
+<div id="register">
+	<p id="signinr">SIGN IN</p>	
+	<input type="text" placeholder="USERNAME" id="tr1"/>
+	<input type="password" placeholder="password" id="tr2"/>
+	<button id="loginbbr">SIGN IN</button>
+	<p id="rmember">Not a member then<span onClick="first()"> JOIN FREE </span></p>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
